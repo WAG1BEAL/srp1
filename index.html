@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="SerapHocayaYardımEt — destek sayfası." />
+  <meta property="og:title" content="SerapHocayaYardımEt" />
+  <meta property="og:description" content="Destek ve bağış bilgileri." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="seraphoca-preview.png" />
+  <meta property="og:image:width" content="665" />
+  <meta property="og:image:height" content="189" />
+  <meta property="og:image:alt" content="Serap Hocaya Yardım Et" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="seraphoca-preview.png" />
+  <title>SerapHocayaYardımEt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dot-field" aria-hidden="true"><div class="dot-layer dot-layer-a"></div><div class="dot-layer dot-layer-b"></div></div>
+  <div class="photo-watermark" aria-hidden="true"><img src="serap-hoca.jpg" alt="" /></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="SerapHocayaYardımEt"><span>SerapHoca</span><b>yaYardımEt</b></a>
+    <nav class="nav" aria-label="Sayfa bölümleri">
+      <a href="#hikaye">Kimdir?</a>
+      <a href="#bagis">Bağış</a>
+    </nav>
+  </header>
+
+  <main class="page-shell" id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="mini-mark">DESTEK SAYFASI</div>
+        <div class="heartbeat-title"><h1>Serap Hocaya<br><span>Yardım Et.</span></h1></div>
+        <p class="lead">Destek olmak isteyenler için bilgiler tek bir yerde.</p>
+        <a class="hero-link" href="#bagis">Bağış bilgilerine geç <span>↓</span></a>
+      </div>
+      <figure class="hero-photo"><img src="serap-hoca.jpg" alt="Serap Hoca" /></figure>
+    </section>
+
+    <section class="content-grid">
+      <article class="story-section" id="hikaye">
+        <div class="section-kicker">01 / KİMDİR</div>
+        <h2>Serap Hoca kimdir?</h2>
+        <div class="story-copy">
+          <p>Serap Hoca, Bülent Ecevit Anadolu Lisesi'nde İngilizce öğretmenliği yapmış bir eğitimcidir.</p>
+          <p>Bu sayfa, ona destek olmak isteyen kişilerin gerekli bilgilere sade ve kolay biçimde ulaşabilmesi amacıyla hazırlanmıştır.</p>
+        </div>
+      </article>
+
+      <section class="donation-section" id="bagis">
+        <div class="section-kicker">02 / DESTEK</div>
+        <h2>Bağış</h2>
+        <p class="donation-note">Banka transferi için IBAN'ı kopyalayabilir veya QR kodu telefonunla tarayabilirsin.</p>
+
+        <div class="iban-box">
+          <div class="iban-main">
+            <div class="iban-heading">IBAN</div>
+            <div id="ibanValue" class="iban-value" aria-label="IBAN"></div>
+            <div class="iban-actions">
+              <button id="copyIban" class="outline-btn" type="button">IBAN'ı Kopyala</button>
+              <button id="payButton" class="solid-btn" type="button">Kartla Bağış Yap</button>
+            </div>
+            <div id="copyMessage" class="copy-message" aria-live="polite"></div>
+            <div id="payMessage" class="pay-message" aria-live="polite"></div>
+          </div>
+          <div class="qr-wrap">
+            <img src="iban-qr.png" alt="IBAN için QR kod" />
+            <span>QR ile aç</span>
+          </div>
+        </div>
+        <p class="privacy-note">Hesap sahibinin adı bu sayfada gösterilmez.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="ahbap-logo.png" alt="Ahbap" class="footer-logo" /><span>SerapHocayaYardımEt</span></div>
+  </footer>
+
+  <dialog id="paymentModal" class="payment-modal">
+    <form method="dialog" class="payment-card">
+      <button class="modal-close" value="cancel" aria-label="Kapat">×</button>
+      <div class="section-kicker">KARTLA BAĞIŞ · DEMO</div>
+      <h3>Demo ödeme</h3>
+      <p>Bu bölüm yalnızca şaka/demo içindir. Gerçek kart işlemi ve para transferi yapılmaz.</p>
+      <div class="amount-row" aria-label="Bağış miktarı">
+        <button type="button" class="amount-btn" data-amount="100">₺100</button>
+        <button type="button" class="amount-btn" data-amount="250">₺250</button>
+        <button type="button" class="amount-btn" data-amount="500">₺500</button>
+      </div>
+      <label class="custom-amount">Tutar (₺)<input id="customAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="İsteğe bağlı" /></label>
+      <button id="continuePayment" class="solid-btn wide" type="button">Ödemeyi Yap</button>
+      <div id="paymentModalMessage" class="modal-message" aria-live="polite"></div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
