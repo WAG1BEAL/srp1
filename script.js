@@ -54,7 +54,7 @@ continuePayment.addEventListener('click', () => {
     return;
   }
 
-  paymentModalMessage.innerHTML = `✓ Ödeme gerçekleşti! <span class="demo-note">(Demo/şaka — gerçek para alınmadı.)</span>`;
+  paymentModalMessage.innerHTML = `✓ Ödeme gerçekleşti! <span class=""></span>`;
   continuePayment.disabled = true;
   continuePayment.textContent = 'Ödeme Tamamlandı';
   continuePayment.style.opacity = '0.75';
