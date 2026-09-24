@@ -1,5 +1,5 @@
 // IBAN bilgisi site için ayarlanmıştır. Hesap sahibi adı sayfada gösterilmez.
-const IBAN = 'TR68 0013 4000 0231 6608 60000 01';
+const IBAN = 'TR68 0013 4000 0231 6608 60000 00';
 
 // Bu sürümde kart ödemesi yalnızca demo/şaka olarak çalışır; gerçek ödeme alınmaz.
 
